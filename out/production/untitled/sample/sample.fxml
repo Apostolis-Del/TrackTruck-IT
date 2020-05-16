@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Accordion GridPane.columnIndex="1" />
+      <AnchorPane prefHeight="600.0" prefWidth="500.0" GridPane.rowIndex="1">
+         <children>
+            <SplitPane dividerPositions="0.1069078947368421" layoutX="-1.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="610.0" prefWidth="510.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="508.0" style="-fx-background-color: #00BFFF;">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../xampp/htdocs/IRProject2020/images/tracktrucklogo-svg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="548.0" prefWidth="508.0" style="-fx-background-color: #696969;">
+                     <children>
+                        <Label layoutX="21.0" layoutY="17.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                 Search Drivers' Posts" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <Label layoutX="271.0" layoutY="17.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="              Upload your own Post" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <Label layoutX="152.0" layoutY="408.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                      Your Orders" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <Label layoutX="152.0" layoutY="451.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                     Negotiations" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <Label layoutX="152.0" layoutY="492.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                   Update Profile" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Label>
+                        <TextField layoutX="58.0" layoutY="68.0" text="Start Location" />
+                        <TextField layoutX="58.0" layoutY="162.0" text="Free Space" />
+                        <TextField layoutX="58.0" layoutY="131.0" text="Current Location" />
+                        <TextField layoutX="58.0" layoutY="100.0" text="Finish Location" />
+                        <TextField layoutX="58.0" layoutY="195.0" text="Date" />
+                        <TextField layoutX="308.0" layoutY="164.0" text="Date" />
+                        <TextField layoutX="308.0" layoutY="130.0" text="Needed Space" />
+                        <TextField layoutX="308.0" layoutY="99.0" text="Finish Location" />
+                        <TextField layoutX="308.0" layoutY="66.0" text="Start Location" />
+                        <Button layoutX="38.0" layoutY="234.0" mnemonicParsing="false" text="Click for Searching Drivers' Posts" />
+                        <Button layoutX="283.0" layoutY="234.0" mnemonicParsing="false" text="Click for Uploading Your Own Post" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
