@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 
 public class ServerMain {
     public static void main(String[] args) {
@@ -11,13 +12,17 @@ public class ServerMain {
         try {
             ServerSocket serverSocket = new ServerSocket(port);
             while(true) {
+                System.out.println("ABOUT TO ACCEPT CLIENT CONNECTION");
                 Socket clientSocket = serverSocket.accept();
-                OutputStream outputStream=clientSocket.getOutputStream();
-                outputStream.write("Hello World\n".getBytes());
-                clientSocket.close();
+                System.out.println("ACCEPTED CONNECTION FROM "+clientSocket);
+                ServerWorker worker=new ServerWorker(clientSocket);
+                worker.start();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
 }
