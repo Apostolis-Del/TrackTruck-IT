@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.muc.ShowReqDetailsScreen">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ReqController">
    <children>
       <SplitPane dividerPositions="0.1694915254237288" layoutX="-1.0" layoutY="-13.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="600.0">
         <items>
@@ -68,8 +68,8 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Button fx:id="acceptbutton" layoutX="236.0" layoutY="256.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="56.0" text="Accept " />
-                  <Button fx:id="rejectbutton" layoutX="357.0" layoutY="256.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="56.0" text="Reject" />
+                  <Button layoutX="236.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonAccept" prefHeight="29.0" prefWidth="56.0" text="Accept " />
+                  <Button layoutX="357.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonReject" prefHeight="29.0" prefWidth="56.0" text="Reject" />
                </children>
             </AnchorPane>
         </items>

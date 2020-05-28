@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -39,7 +39,7 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="548.0" prefWidth="508.0" style="-fx-background-color: #696969;">
                      <children>
-                        <Label layoutX="21.0" layoutY="17.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                 Search Drivers' Posts" textAlignment="CENTER" textFill="WHITE">
+                        <Label layoutX="21.0" layoutY="17.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                 Search Clients' Posts" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
@@ -47,7 +47,7 @@
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <Label layoutX="22.0" layoutY="299.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                      Your Orders" textAlignment="CENTER" textFill="WHITE">
+                        <Label layoutX="22.0" layoutY="299.0" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #00BFFF;" text="                      Your Deals" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
@@ -60,17 +60,16 @@
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
                         <TextField layoutX="58.0" layoutY="68.0" promptText="Start Location" />
-                        <TextField layoutX="58.0" layoutY="162.0" promptText="Free Space" />
-                        <TextField layoutX="58.0" layoutY="131.0" promptText="Current Location" />
+                        <TextField layoutX="58.0" layoutY="130.0" promptText="Space" />
                         <TextField layoutX="58.0" layoutY="100.0" promptText="Finish Location" />
-                        <TextField layoutX="58.0" layoutY="195.0" promptText="Date" />
+                        <TextField layoutX="58.0" layoutY="164.0" promptText="Date" />
                         <TextField layoutX="308.0" layoutY="164.0" promptText="Date" />
-                        <TextField layoutX="308.0" layoutY="130.0" promptText="Needed Space" />
+                        <TextField layoutX="308.0" layoutY="130.0" promptText="Available Space" />
                         <TextField layoutX="308.0" layoutY="99.0" promptText="Finish Location" />
                         <TextField layoutX="308.0" layoutY="66.0" promptText="Start Location" />
-                        <Button layoutX="107.0" layoutY="234.0" mnemonicParsing="false" text="Search" />
+                        <Button layoutX="100.0" layoutY="208.0" mnemonicParsing="false" text="Search" />
                         <Button layoutX="355.0" layoutY="208.0" mnemonicParsing="false" text="Upload" />
-                        <Button layoutX="81.0" layoutY="345.0" mnemonicParsing="false" text="Tracking Of Order" />
+                        <Button layoutX="112.0" layoutY="349.0" mnemonicParsing="false" text="Orders" />
                         <Button layoutX="109.0" layoutY="419.0" mnemonicParsing="false" text="Ratings" />
                         <Button layoutX="87.0" layoutY="382.0" mnemonicParsing="false" text="Communication" />
                      </children>

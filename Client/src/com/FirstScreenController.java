@@ -1,3 +1,5 @@
+package com;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
+public class FirstScreenController {
 
    // @FXML
     //private Button requestbutton;
@@ -17,7 +19,9 @@ public class Controller {
     //}
   @FXML
     public void changeScreenButtonPushed(javafx.event.ActionEvent event) throws IOException {
-        Parent parent1 = FXMLLoader.load(getClass().getResource("ShowReqDetailsScreen.fxml"));
+      final ChatClient client;
+
+      Parent parent1 = FXMLLoader.load(getClass().getResource("ShowReqDetailsScreen.fxml"));
 
         Scene scene1 = new Scene(parent1);
 

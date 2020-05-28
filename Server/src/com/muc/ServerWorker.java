@@ -9,9 +9,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
-/**
- * Created by jim on 4/18/17.
- */
+
 public class ServerWorker extends Thread {
 
     private final Socket clientSocket;
@@ -58,6 +56,8 @@ public class ServerWorker extends Thread {
                     handleJoin(tokens);
                 } else if ("leave".equalsIgnoreCase(cmd)) {
                     handleLeave(tokens);
+                } else if ("start".equalsIgnoreCase(cmd)) {
+                    handleStart(tokens);
                 } else {
                     String msg = "unknown " + cmd + "\n";
                     outputStream.write(msg.getBytes());
@@ -66,6 +66,28 @@ public class ServerWorker extends Thread {
         }
 
         clientSocket.close();
+    }
+
+    private void handleStart(String[] tokens) throws IOException {
+        String sendTo = tokens[1];
+        String body = tokens[2];
+
+        boolean isTopic = sendTo.charAt(0) == '#';
+
+        List<ServerWorker> workerList = server.getWorkerList();
+        for(ServerWorker worker : workerList) {
+            if (isTopic) {
+                if (worker.isMemberOfTopic(sendTo)) {
+                    String outMsg = "msg " + sendTo + ":" + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            } else {
+                if (sendTo.equalsIgnoreCase(worker.getLogin())) {
+                    String outMsg = "msg " + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            }
+        }
     }
 
     private void handleLeave(String[] tokens) {

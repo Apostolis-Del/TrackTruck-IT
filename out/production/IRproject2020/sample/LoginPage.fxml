@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.LoginController">
+<AnchorPane prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <AnchorPane prefHeight="102.0" prefWidth="601.0" style="-fx-background-color: #00bfff;">
             <children>
@@ -29,8 +27,8 @@
                 <Font name="System Bold" size="17.0" />
             </font>
         </TextField>
-        <ToggleButton layoutX="255.0" layoutY="399.0" mnemonicParsing="false" onAction="#onloginbuttonclicked" text="Submit" />
-        <TextArea fx:id="username" layoutX="149.0" layoutY="237.0" prefHeight="38.0" prefWidth="303.0" promptText="Enter your e-mail address" />
-        <TextArea fx:id="password" layoutX="151.0" layoutY="305.0" prefHeight="38.0" prefWidth="158.0" promptText="Enter your password" />
+        <ToggleButton layoutX="255.0" layoutY="399.0" mnemonicParsing="false" text="Submit" />
+        <TextArea layoutX="149.0" layoutY="237.0" prefHeight="38.0" prefWidth="303.0" promptText="Enter your e-mail address" />
+        <TextArea layoutX="151.0" layoutY="305.0" prefHeight="38.0" prefWidth="158.0" promptText="Enter your password" />
     </children>
 </AnchorPane>
