@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <Pane>
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.38">
+               <image>
+                  <Image url="@eikonesProject/34_kassbohrer.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="116.0" fitWidth="235.0" layoutX="74.0" layoutY="29.0">
+               <image>
+                  <Image url="@eikonesProject/logofinal.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1366.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="HOME" />
+                <Menu mnemonicParsing="false" text="POSTS">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="CLIENT'S" />
+                        <MenuItem mnemonicParsing="false" text="DRIVER'S" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="MAPS">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="MOVING TRUCKS" />
+                        <MenuItem mnemonicParsing="false" text="MY ORDERS" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="ABOUT US" />
+              </menus>
+            </MenuBar>
+            <Label layoutX="1163.0" layoutY="67.0" text="Username" textAlignment="CENTER" textFill="DEEPSKYBLUE">
+               <font>
+                  <Font name="Times New Roman Italic" size="18.0" />
+               </font>
+            </Label>
+            <Avatar layoutX="1246.0" layoutY="49.0" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1239.0" layoutY="42.0">
+               <image>
+                  <Image url="@eikonesProject/avatardefault_92824.png" />
+               </image>
+            </ImageView>
+            <Text fill="DEEPSKYBLUE" layoutX="579.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MY POSTS" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="577.0" layoutY="631.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="93.0" style="-fx-background-color: #00BFFF;" text="CREATE NEW" textFill="DIMGRAY" textOverrun="CENTER_ELLIPSIS" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane layoutX="348.0" layoutY="184.0" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #FAFAFA;">
+               <children>
+                  <HBox layoutX="50.0" layoutY="57.0" />
+                  <VBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="57.0" prefHeight="300.0" prefWidth="350.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                        <Label text="30/5/2020 ΠΑΤΡΑ - ΑΘΗΝΑ, ΧΑΡΤΙΚΑ" textFill="DIMGRAY">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                        <Label layoutX="10.0" layoutY="152.0" text="28/5/2020 ΠΑΤΡΑ - ΓΙΑΝΝΕΝΑ, ΜΠΥΡΑ" textFill="DIMGRAY">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Label layoutX="10.0" layoutY="160.0" text="27/5/2020 ΓΙΑΝΝΕΝΑ - ΠΑΤΡΑ, ΝΕΡΟ" textFill="DIMGRAY">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Label layoutX="10.0" layoutY="168.0" text="27/5/2020 ΑΓΡΙΝΙΟ - ΓΙΑΝΝΕΝΑ, ΖΩΟΤΡΟΦΕΣ" textFill="DIMGRAY">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                        <Label layoutX="10.0" layoutY="176.0" text="26/5/2020 ΠΥΡΓΟΣ - ΑΓΡΙΝΙΟ, ΦΡΑΟΥΛΕΣ" textFill="DIMGRAY">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Pagination blendMode="DARKEN" prefHeight="311.0" prefWidth="350.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Pagination>
+                     </children>
+                  </VBox>
+                  <Button layoutX="400.0" layoutY="77.0" mnemonicParsing="false" style="-fx-background-color: #00CF00;" text="EDIT " textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="454.0" layoutY="77.0" mnemonicParsing="false" style="-fx-background-color: #DD0000;" text="DELETE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="400.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: #00BFFF;" text="VIEW" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="400.0" layoutY="175.0" mnemonicParsing="false" style="-fx-background-color: #00BFFF;" text="VIEW" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="400.0" layoutY="225.0" mnemonicParsing="false" style="-fx-background-color: #00BFFF;" text="VIEW" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="400.0" layoutY="277.0" mnemonicParsing="false" style="-fx-background-color: #00BFFF;" text="VIEW" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="454.0" layoutY="125.0" mnemonicParsing="false" style="-fx-background-color: #DD0000;" text="DELETE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="454.0" layoutY="175.0" mnemonicParsing="false" style="-fx-background-color: #DD0000;" text="DELETE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="454.0" layoutY="225.0" mnemonicParsing="false" style="-fx-background-color: #DD0000;" text="DELETE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="454.0" layoutY="277.0" mnemonicParsing="false" style="-fx-background-color: #DD0000;" text="DELETE" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <TextField layoutX="406.0" layoutY="32.0" prefHeight="25.0" prefWidth="97.0" promptText="Search..." />
+                  <Button layoutX="471.0" layoutY="32.0" mnemonicParsing="false" text="Go" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
