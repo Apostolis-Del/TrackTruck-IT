@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="fgf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="960.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CompletedDeals.Controller">
+    <children>
+        <TableView fx:id="CompletedDeal" layoutX="-1.0" layoutY="53.0" prefHeight="362.0" prefWidth="603.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" style="-fx-background-color: #00BFFF;" text="Name" />
+                <TableColumn fx:id="startColumn" prefWidth="75.0" style="-fx-background-color: #696969;" text="Start" />
+                <TableColumn fx:id="destinationColumn" prefWidth="75.0" style="-fx-background-color: #00BFFF;" text="Destination" />
+                <TableColumn fx:id="dateColumn" prefWidth="83.0" style="-fx-background-color: #696969;" text="Date" />
+                <TableColumn fx:id="requestColumn" minWidth="7.0" prefWidth="114.0" style="-fx-background-color: #00BFFF;" text="Send Request" />
+            <TableColumn fx:id="requestColumn1" prefWidth="104.0" style="-fx-background-color: #696969;" text="Send Complaints" />
+            </columns>
+        </TableView>
+      <Label layoutX="25.0" layoutY="24.0" text="TruckTrack" textFill="DEEPSKYBLUE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="543.0" layoutY="436.0" mnemonicParsing="false" text="Button" />
+
+    </children>
+</AnchorPane>
