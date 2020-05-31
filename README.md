@@ -1,2 +1,3 @@
 # IRPROJECT2020
-i just cooked some code and wanna add it :) :)
+Information Technology University Project.
+A Java app for Truck Logistics named TrackTruck.
