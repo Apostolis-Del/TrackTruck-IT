@@ -57,7 +57,10 @@ public class ServerWorker extends Thread {
                 } else if ("leave".equalsIgnoreCase(cmd)) {
                     handleLeave(tokens);
                 } else if ("start".equalsIgnoreCase(cmd)) {
+                    String[] tokensMsg = StringUtils.split(line, null, 3);
                     handleStart(tokens);
+                } else if ("incoming".equalsIgnoreCase(cmd)) {
+                        handleIncoming(tokens);
                 } else {
                     String msg = "unknown " + cmd + "\n";
                     outputStream.write(msg.getBytes());
@@ -66,6 +69,10 @@ public class ServerWorker extends Thread {
         }
 
         clientSocket.close();
+    }
+
+    private void handleIncoming(String[] tokens) {
+
     }
 
     private void handleStart(String[] tokens) throws IOException {
@@ -78,12 +85,12 @@ public class ServerWorker extends Thread {
         for(ServerWorker worker : workerList) {
             if (isTopic) {
                 if (worker.isMemberOfTopic(sendTo)) {
-                    String outMsg = "msg " + sendTo + ":" + login + " " + body + "\n";
+                    String outMsg = "start " + sendTo + ":" + login + " " + body + "\n";
                     worker.send(outMsg);
                 }
             } else {
                 if (sendTo.equalsIgnoreCase(worker.getLogin())) {
-                    String outMsg = "msg " + login + " " + body + "\n";
+                    String outMsg = "start " + login + " " + body + "\n";
                     worker.send(outMsg);
                 }
             }
@@ -128,6 +135,8 @@ public class ServerWorker extends Thread {
                     String outMsg = "msg " + login + " " + body + "\n";
                     worker.send(outMsg);
                 }
+                String outMsg = "msg " + sendTo + ":" + login + " " + body + "\n";
+                worker.send(outMsg);
             }
         }
     }
@@ -198,3 +207,4 @@ public class ServerWorker extends Thread {
         }
     }
 }
+

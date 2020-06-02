@@ -1,3 +1,7 @@
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
@@ -108,9 +112,18 @@ public class DriverMain {
                     } else if ("msg".equalsIgnoreCase(cmd)) {
                         String[] tokensMsg = StringUtils.split(line, null, 3);
                         handleMessage(tokensMsg);
+                    }else if ("start".equalsIgnoreCase(cmd)) {
+                        String[] tokensMsg = StringUtils.split(line, null, 3);
+                        //handleStart(tokensMsg);
+                    }
+                    else if ("incoming".equalsIgnoreCase(cmd)) {
+                        String[] tokensMsg = StringUtils.split(line, null, 3);
+                        secondWindow();
                     }
                 }
-            }
+
+                }
+
         } catch (Exception ex) {
             ex.printStackTrace();
             try {
@@ -118,6 +131,23 @@ public class DriverMain {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void secondWindow() throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowReqDetailsScreen.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            //appController = loader.getController(); = loader.getController();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
