@@ -1,5 +1,12 @@
 package com;
 
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
@@ -65,6 +72,10 @@ public class ChatClient {
         String cmd = "msg " + sendTo + " " + msgBody + "\n";
         serverOut.write(cmd.getBytes());
     }
+    public void start(String sendTo, String msgBody) throws IOException {
+        String cmd = "start " + sendTo + " " + msgBody + "\n";
+        serverOut.write(cmd.getBytes());
+    }
 
     public boolean login(String login, String password) throws IOException {
         String cmd = "login " + login + " " + password + "\n";
@@ -111,6 +122,18 @@ public class ChatClient {
                         String[] tokensMsg = StringUtils.split(line, null, 3);
                         handleMessage(tokensMsg);
                     }
+                    else if ("start".equalsIgnoreCase(cmd)) {
+                        String[] tokensMsg = StringUtils.split(line, null, 3);
+                        handleStart(tokensMsg);
+                        secondWindow();
+
+                    }
+                    else if ("incoming".equalsIgnoreCase(cmd)) {
+                        String[] tokensMsg = StringUtils.split(line, null, 3);
+                        secondWindow();
+                        SecondApp sec=new SecondApp();
+
+                    }
                 }
             }
         } catch (Exception ex) {
@@ -120,6 +143,62 @@ public class ChatClient {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void secondWindow() throws IOException {
+        try {
+            /*
+           Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        primaryStage.setTitle("TrackTruck");
+        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.show();
+
+            */
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    // Update UI here.
+                   /* FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowReqDetailsScreen.fxml"));
+                    Parent root = null;
+                    try {
+                        root = loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Scene scene = new Scene(root, 600, 600);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+                    */
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("ShowReqDetailsScreen.fxml"));
+                    Parent firstscreenparent = null;
+                    try {
+                        firstscreenparent = loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Scene firstscreensecene = new Scene(firstscreenparent);
+                    Stage window2= new Stage();
+                    window2.setScene(firstscreensecene);
+                    window2.show();
+                }
+            });
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void handleStart(String[] tokensMsg) {
+        String start = tokensMsg[1];
+        String msgBody = tokensMsg[2];
+
+        for(MessageListener listener : messageListeners) {
+            listener.onMessage(start, msgBody);
         }
     }
 
