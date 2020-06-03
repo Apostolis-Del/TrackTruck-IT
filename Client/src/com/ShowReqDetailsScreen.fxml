@@ -51,17 +51,17 @@
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="finishlabel" prefHeight="36.0" prefWidth="100.0" textFill="GREY">
+                        <Label fx:id="finishlabel" prefHeight="36.0" prefWidth="100.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="spacelabel" prefHeight="36.0" prefWidth="100.0" textFill="GREY">
+                        <Label fx:id="spacelabel" prefHeight="36.0" prefWidth="100.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="datelabel" prefHeight="29.0" prefWidth="102.0" textFill="GREY">
+                        <Label fx:id="datelabel" prefHeight="29.0" prefWidth="102.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
@@ -70,6 +70,11 @@
                   </VBox>
                   <Button layoutX="236.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonAccept" prefHeight="29.0" prefWidth="56.0" text="Accept " />
                   <Button layoutX="357.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonReject" prefHeight="29.0" prefWidth="56.0" text="Reject" />
+                  <Label fx:id="nameLabel" layoutX="446.0" layoutY="21.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </items>

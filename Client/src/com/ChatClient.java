@@ -2,16 +2,22 @@ package com;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class ChatClient {
@@ -128,6 +134,18 @@ public class ChatClient {
                         secondWindow();
 
                     }
+                    else if ("driveragreed".equalsIgnoreCase(cmd)) {
+                        String[] tokensMsg = StringUtils.split(line, null, 3);
+                        handleStart(tokensMsg);
+                        //secondWindow();
+
+                    }
+                    else if ("tocustfromdriver".equalsIgnoreCase(cmd)) {
+                        String[] tokensMsg = StringUtils.split(line, null, 3);
+                        handleStart(tokensMsg);
+                        secondWindow();
+
+                    }
                     else if ("incoming".equalsIgnoreCase(cmd)) {
                         String[] tokensMsg = StringUtils.split(line, null, 3);
                         secondWindow();
@@ -158,19 +176,6 @@ public class ChatClient {
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
-                    // Update UI here.
-                   /* FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowReqDetailsScreen.fxml"));
-                    Parent root = null;
-                    try {
-                        root = loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Scene scene = new Scene(root, 600, 600);
-                    Stage stage = new Stage();
-                    stage.setScene(scene);
-                    stage.show();
-                    */
                     FXMLLoader loader = new FXMLLoader();
                     loader.setLocation(getClass().getResource("ShowReqDetailsScreen.fxml"));
                     Parent firstscreenparent = null;

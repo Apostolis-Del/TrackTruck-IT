@@ -12,11 +12,16 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Arrays;
 
 public class ReqController {
 
     @FXML
     private Text reqheader;
+
+    @FXML
+    private Label nameLabel;
 
     @FXML
     private Label startlabel;
@@ -35,6 +40,37 @@ public class ReqController {
 
     @FXML
     private Button rejectbutton;
+
+    public void initialize() {
+
+        String[] info = new String[26];
+        Driver1 driver = new Driver1();
+        Client1 client = new Client1();
+
+        CostSubsystem costdata = new CostSubsystem();
+
+        try {
+            info = costdata.RetrieveUsDrData(driver, client);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (
+                SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        String ClientName = info[14];
+        String StartDestination = info[16];
+        String FinishDestination = info[20];
+        String SpaceRequired = info[24];
+        String date = info[23];
+
+        //System.out.println(Arrays.toString(info));
+        nameLabel.setText(ClientName);
+        startlabel.setText(StartDestination);
+        finishlabel.setText(FinishDestination);
+        spacelabel.setText(SpaceRequired);
+        datelabel.setText(date);
+
+    }
 
     public void changeScreenButtonAccept(ActionEvent event) throws IOException {
         Parent parent2 = FXMLLoader.load(getClass().getResource("PaymentScreen.fxml"));
