@@ -31,6 +31,7 @@ public class FirstScreenController {
     private ChatClient SelectedClient;
     //private String usernameclient;
 
+
     @FXML
     public void changeScreenButtonPushed(javafx.event.ActionEvent event) throws IOException {
         final ChatClient client;
@@ -38,6 +39,15 @@ public class FirstScreenController {
         String username1=username.toString();
         System.out.println("esteila to minimatk"+username1);
         SelectedClient.start(senduser, "del");
+        System.out.println(SelectedClient);
+        //SelectedClient.drivertoclient(senduser, "del");
+
+
+        //FXMLLoader loader = new FXMLLoader(getClass().getResource("ReqController.fxml"));
+       // Parent root = loader.load();
+       // ReqController req=loader.getController();
+        //req.transferMessage(senduser);
+
         //SelectedClient.start(senduser, "del");
 
         //Parent parent1 = FXMLLoader.load(getClass().getResource("ShowReqDetailsScreen.fxml"));
@@ -56,4 +66,7 @@ public class FirstScreenController {
           username.setText(usernameclient);
 
     }
+
+
+
 }

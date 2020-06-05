@@ -37,8 +37,10 @@ public class PaymentController {
 
         costLabel.setText(valueOf(value));
 
-
     }
+
+
+
         public void changeScreenButtonPay(ActionEvent event) throws IOException {
         Parent parent4 = FXMLLoader.load(getClass().getResource("PaymentScreen.fxml"));
 

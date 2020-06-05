@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -51,17 +52,17 @@
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="finishlabel" prefHeight="36.0" prefWidth="100.0" textFill="GREY">
+                        <Label fx:id="finishlabel" prefHeight="36.0" prefWidth="100.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="spacelabel" prefHeight="36.0" prefWidth="100.0" textFill="GREY">
+                        <Label fx:id="spacelabel" prefHeight="36.0" prefWidth="100.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="datelabel" prefHeight="29.0" prefWidth="102.0" textFill="GREY">
+                        <Label fx:id="datelabel" prefHeight="29.0" prefWidth="102.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
@@ -70,6 +71,13 @@
                   </VBox>
                   <Button layoutX="236.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonAccept" prefHeight="29.0" prefWidth="56.0" text="Accept " />
                   <Button layoutX="357.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonReject" prefHeight="29.0" prefWidth="56.0" text="Reject" />
+                  <Label fx:id="nameLabel" layoutX="446.0" layoutY="21.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="256.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The deal of:" />
+                  <TextField fx:id="sendLabel" layoutX="327.0" layoutY="304.0" prefHeight="25.0" prefWidth="73.0"/>
                </children>
             </AnchorPane>
         </items>

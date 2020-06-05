@@ -60,18 +60,40 @@ public class ServerWorker extends Thread {
                     String[] tokensMsg = StringUtils.split(line, null, 3);
                     handleStart(tokens);
                 } else if ("incoming".equalsIgnoreCase(cmd)) {
-                        handleIncoming(tokens);
+                       // handleIncoming(tokens);
+                } else if ("drivertoclient".equalsIgnoreCase(cmd)) {
+                    String[] tokensMsg = StringUtils.split(line, null, 3);
+                    handledrivertoclient(tokens);
                 } else {
-                    String msg = "unknown " + cmd + "\n";
-                    outputStream.write(msg.getBytes());
+                        String msg = "unknown " + cmd + "\n";
+                        outputStream.write(msg.getBytes());
+                    }
                 }
-            }
         }
 
         clientSocket.close();
     }
 
-    private void handleIncoming(String[] tokens) {
+    private void handledrivertoclient(String[] tokens) throws IOException {
+        String sendTo = tokens[1];
+        String body = tokens[2];
+
+        boolean isTopic = sendTo.charAt(0) == '#';
+
+        List<ServerWorker> workerList = server.getWorkerList();
+        for(ServerWorker worker : workerList) {
+            if (isTopic) {
+                if (worker.isMemberOfTopic(sendTo)) {
+                    String outMsg = "drivertoclient " + sendTo + ":" + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            } else {
+                if (sendTo.equalsIgnoreCase(worker.getLogin())) {
+                    String outMsg = "drivertoclient " + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            }
+        }
 
     }
 

@@ -82,6 +82,10 @@ public class ChatClient {
         String cmd = "start " + sendTo + " " + msgBody + "\n";
         serverOut.write(cmd.getBytes());
     }
+    public void drivertoclient(String sendTo, String msgBody) throws IOException {
+        String cmd = "drivertoclient " + sendTo + " " + msgBody + "\n";
+        serverOut.write(cmd.getBytes());
+    }
 
     public boolean login(String login, String password) throws IOException {
         String cmd = "login " + login + " " + password + "\n";
@@ -134,22 +138,10 @@ public class ChatClient {
                         secondWindow();
 
                     }
-                    else if ("driveragreed".equalsIgnoreCase(cmd)) {
+                    else if ("drivertoclient".equalsIgnoreCase(cmd)) {
                         String[] tokensMsg = StringUtils.split(line, null, 3);
                         handleStart(tokensMsg);
-                        //secondWindow();
-
-                    }
-                    else if ("tocustfromdriver".equalsIgnoreCase(cmd)) {
-                        String[] tokensMsg = StringUtils.split(line, null, 3);
-                        handleStart(tokensMsg);
-                        secondWindow();
-
-                    }
-                    else if ("incoming".equalsIgnoreCase(cmd)) {
-                        String[] tokensMsg = StringUtils.split(line, null, 3);
-                        secondWindow();
-                        SecondApp sec=new SecondApp();
+                        drivertoclientwindow();
 
                     }
                 }
@@ -161,6 +153,40 @@ public class ChatClient {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+    public void drivertoclientwindow() throws IOException {
+        try {
+            /*
+           Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        primaryStage.setTitle("TrackTruck");
+        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.show();
+
+            */
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("PaymentScreen.fxml"));
+                    Parent firstscreenparent = null;
+                    try {
+                        firstscreenparent = loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    Scene firstscreensecene = new Scene(firstscreenparent);
+                    Stage window2= new Stage();
+                    window2.setScene(firstscreensecene);
+                    window2.show();
+                }
+            });
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -184,6 +210,7 @@ public class ChatClient {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+
                     Scene firstscreensecene = new Scene(firstscreenparent);
                     Stage window2= new Stage();
                     window2.setScene(firstscreensecene);
