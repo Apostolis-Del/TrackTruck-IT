@@ -9,6 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" name="lib2" level="project" />
-    <orderEntry type="module" module-name="TrackingOfOrder" />
+    <orderEntry type="module" module-name="CompletionOfDeal" />
   </component>
 </module>
