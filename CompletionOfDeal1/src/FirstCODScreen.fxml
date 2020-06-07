@@ -18,18 +18,24 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;" />
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="613.0" style="-fx-background-color: #696969 #696969;">
                      <children>
-                        <Text fill="WHITE" layoutX="51.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you have any complications with your delivery, please report it here:" textAlignment="CENTER" wrappingWidth="501.630859375">
+                        <Text fill="WHITE" layoutX="51.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you have any complications with your delivery, please report it here:" textAlignment="CENTER" wrappingWidth="501.630859375">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Text>
-                        <Button layoutX="239.0" layoutY="115.0" mnemonicParsing="false" onAction="#reportbuttonpushed" text="Report Complication" />
-                        <Text fill="WHITE" layoutX="51.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If the shipment is delivered then click here:" textAlignment="CENTER" wrappingWidth="501.630859375">
+                        <Button layoutX="239.0" layoutY="85.0" mnemonicParsing="false" onAction="#reportbuttonpushed" text="Report Complication" />
+                        <Text fill="WHITE" layoutX="51.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If the shipment is delivered then click here:" textAlignment="CENTER" wrappingWidth="501.630859375">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Text>
-                        <Button layoutX="239.0" layoutY="237.0" mnemonicParsing="false" onAction="#deliveredbuttonpushed" text="Shipment Delivered" />
+                        <Button layoutX="242.0" layoutY="275.0" mnemonicParsing="false" onAction="#deliveredbuttonpushed" text="Shipment Delivered" />
+                        <Text fill="WHITE" layoutX="31.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If delivery started, then click here for tracking of order." textAlignment="CENTER" wrappingWidth="541.630859375">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="250.0" layoutY="180.0" mnemonicParsing="false" onAction="#trackingoforderbuttonpushed" text="TrackingOfOrder" />
                      </children>
                         </AnchorPane>
                     </items>

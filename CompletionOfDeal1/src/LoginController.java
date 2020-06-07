@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -19,19 +20,19 @@ public class LoginController extends Component {
     private TextArea password;
 
     public void initialize() throws IOException {
-        ChatClient client=new ChatClient("localhost", 8818);;
+        ChatClient client = new ChatClient("localhost", 8818);
+        ;
         String username2 = username.getText();
-
 
 
     }
 
     public void onloginbuttonclicked(javafx.event.ActionEvent actionEvent) throws IOException {
-        ChatClient client=new ChatClient("localhost", 8818);;
+        ChatClient client = new ChatClient("localhost", 8818);
+        ;
         client.connect();
         String username2 = username.getText();
         String password2 = username.getText();
-
 
 
         try {
@@ -43,36 +44,24 @@ public class LoginController extends Component {
                 Scene firstscreensecene = new Scene(firstscreenparent);
 
                 //access the controller and call a method
-                FirstTOOController controller=loader.getController();
-                controller.initData(client,username2);
+                FirstCODController controller = loader.getController();
+                controller.initData(client, username2);
 
 
-
-
-
-                //Parent parent2 = FXMLLoader.load(getClass().getResource("FirstScreen.fxml"));
-
-                //Scene scene2 = new Scene(parent2);
-
-                Stage window2= (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                Stage window2 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 window2.setScene(firstscreensecene);
                 window2.show();
-
-
-
-               // Stage window3= (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-               // window3.setScene(firstscreensecene2);
-               // window3.show();
 
 
             } else {
                 System.out.println("wrong uspass");
                 JOptionPane.showMessageDialog(this, "Invalid login/password.");
 
+
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
 
+    }
 }

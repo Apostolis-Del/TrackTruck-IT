@@ -70,7 +70,15 @@ public class ServerWorker extends Thread {
                 } else if ("seconderror".equalsIgnoreCase(cmd)) {
                     String[] tokensMsg = StringUtils.split(line, null, 3);
                     handleseconderror(tokens);
-                } else {
+                }
+                else if ("ratings".equalsIgnoreCase(cmd)) {
+                    String[] tokensMsg = StringUtils.split(line, null, 3);
+                    handleratings(tokens);
+                }
+                else if ("trackingoforder".equalsIgnoreCase(cmd)) {
+                    String[] tokensMsg = StringUtils.split(line, null, 3);
+                    handletrackingoforder(tokens);
+                }else {
                         String msg = "unknown " + cmd + "\n";
                         outputStream.write(msg.getBytes());
                     }
@@ -78,6 +86,50 @@ public class ServerWorker extends Thread {
         }
 
         clientSocket.close();
+    }
+
+    private void handletrackingoforder(String[] tokens) throws IOException {
+        String sendTo = tokens[1];
+        String body = tokens[2];
+
+        boolean isTopic = sendTo.charAt(0) == '#';
+
+        List<ServerWorker> workerList = server.getWorkerList();
+        for(ServerWorker worker : workerList) {
+            if (isTopic) {
+                if (worker.isMemberOfTopic(sendTo)) {
+                    String outMsg = "trackingoforder " + sendTo + ":" + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            } else {
+                if (sendTo.equalsIgnoreCase(worker.getLogin())) {
+                    String outMsg = "trackingoforder " + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            }
+        }
+    }
+
+    private void handleratings(String[] tokens) throws IOException {
+        String sendTo = tokens[1];
+        String body = tokens[2];
+
+        boolean isTopic = sendTo.charAt(0) == '#';
+
+        List<ServerWorker> workerList = server.getWorkerList();
+        for(ServerWorker worker : workerList) {
+            if (isTopic) {
+                if (worker.isMemberOfTopic(sendTo)) {
+                    String outMsg = "ratings " + sendTo + ":" + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            } else {
+                if (sendTo.equalsIgnoreCase(worker.getLogin())) {
+                    String outMsg = "ratings " + login + " " + body + "\n";
+                    worker.send(outMsg);
+                }
+            }
+        }
     }
 
     private void handleseconderror(String[] tokens) throws IOException {
@@ -236,7 +288,7 @@ public class ServerWorker extends Thread {
             String login = tokens[1];
             String password = tokens[2];
 
-            if ((login.equals("guest") && password.equals("guest")) || (login.equals("jim") && password.equals("jim")) ) {
+            if ((login.equals("driver") && password.equals("driver")) || (login.equals("client") && password.equals("client")) ) {
                 String msg = "ok login\n";
                 outputStream.write(msg.getBytes());
                 this.login = login;

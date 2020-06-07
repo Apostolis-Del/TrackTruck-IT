@@ -62,10 +62,10 @@ public class ChatClient {
         } else {
             System.out.println("Connect successful");
 
-            if (client.login("guest", "guest")) {
+            if (client.login("driver", "driver")) {
                 System.out.println("Login successful");
 
-                client.msg("jim", "Hello World!");
+                client.msg("client", "Hello World!");
             } else {
                 System.err.println("Login failed");
             }
