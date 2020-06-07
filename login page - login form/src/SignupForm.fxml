@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupForm">
+   <children>
+      <AnchorPane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #00bfff;">
+         <children>
+            <TextField alignment="CENTER" blendMode="MULTIPLY" layoutX="124.0" layoutY="9.0" prefHeight="35.0" prefWidth="320.0" style="-fx-background-color: #oobfff;" text="Welcome to TrackTruck!">
+               <font>
+                  <Font name="Bodoni MT Italic" size="24.0" />
+               </font></TextField>
+         </children></AnchorPane>
+      <AnchorPane layoutY="66.0" prefHeight="336.0" prefWidth="600.0" style="-fx-background-color: #696969;">
+         <children>
+            <AnchorPane layoutX="-2.0" prefHeight="9.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" />
+            <TextField alignment="CENTER" layoutX="185.0" layoutY="27.0" prefHeight="46.0" prefWidth="225.0" style="-fx-background-color: #00bfff;" text="Fill the required fields to Sign Up">
+               <font>
+                  <Font name="Bodoni MT" size="14.0" />
+               </font>
+            </TextField>
+            <TextArea layoutX="14.0" layoutY="83.0" prefHeight="38.0" prefWidth="245.0" promptText="Name" />
+            <TextArea layoutX="330.0" layoutY="83.0" prefHeight="24.0" prefWidth="255.0" promptText="Adress, City" />
+            <TextArea layoutX="14.0" layoutY="129.0" prefHeight="38.0" prefWidth="246.0" promptText="Email" />
+            <TextArea layoutX="330.0" layoutY="129.0" prefHeight="31.0" prefWidth="255.0" promptText="Password (8 chars minimum)" />
+            <TextArea layoutX="14.0" layoutY="176.0" prefHeight="38.0" prefWidth="246.0" promptText="Phone Number" />
+            <ToggleButton layoutX="271.0" layoutY="296.0" mnemonicParsing="false" text="Submit" />
+            <RadioButton layoutX="220.0" layoutY="270.0" mnemonicParsing="false" text="I accept the Terms of Use" />
+            <CheckBox layoutX="332.0" layoutY="214.0" mnemonicParsing="false" text="I am a Company Member" textFill="WHITE" />
+            <CheckBox layoutX="331.0" layoutY="186.0" mnemonicParsing="false" text="I am a Driver" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
