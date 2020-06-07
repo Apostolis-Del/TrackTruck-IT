@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FirstTOOController">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -32,7 +32,7 @@
                      <children>
                         <ImageView fitHeight="62.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../xampp/htdocs/IRProject2020/images/tracktrucklogo-svg.png" />
+                              <Image url="@/TruckTrack[Maps]/out/production/TruckTrackfx/sample/eikonesProject/logofinal.png" />
                            </image>
                         </ImageView>
                      </children>

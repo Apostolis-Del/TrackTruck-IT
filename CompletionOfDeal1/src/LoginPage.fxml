@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+    <children>
+        <AnchorPane prefHeight="102.0" prefWidth="601.0" style="-fx-background-color: #00bfff;">
+            <children>
+                <ImageView fitHeight="85.0" fitWidth="167.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <!-- <Image url="@../../../Desktop/τεχνολογια%20λογισμικου/1ο%20παραδοτεο%20-%20misc/91860115_2629516490671057_7776064626147459072_n.png" /> -->
+                    </image>
+                </ImageView>
+            <Text layoutX="322.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to TrackTruck" wrappingWidth="239.4765625">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="102.0" prefHeight="8.0" prefWidth="602.0" style="-fx-background-color: #ffffff;" />
+        <ToggleButton layoutX="283.0" layoutY="359.0" mnemonicParsing="false" onAction="#onloginbuttonclicked" text="Submit" />
+        <TextArea fx:id="username" layoutX="158.0" layoutY="219.0" prefHeight="38.0" prefWidth="303.0" promptText="Enter your e-mail address" />
+        <TextArea fx:id="password" layoutX="231.0" layoutY="272.0" prefHeight="38.0" prefWidth="158.0" promptText="Enter your password" />
+      <Text fill="WHITE" layoutX="227.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx: #00bfff;" text="Log In | Sign Up" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
