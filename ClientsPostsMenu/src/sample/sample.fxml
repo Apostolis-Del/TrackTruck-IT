@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="fgf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="960.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <children>
+        <TableView fx:id="DriverPosts" layoutX="178.0" layoutY="53.0" prefHeight="328.0" prefWidth="622.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" style="-fx-background-color: #00BFFF;" text="Name" />
+                <TableColumn fx:id="startColumn" prefWidth="75.0" style="-fx-background-color: #696969;" text="Start" />
+                <TableColumn fx:id="destinationColumn" prefWidth="105.0" style="-fx-background-color: #00BFFF;" text="Destination" />
+                <TableColumn fx:id="spaceColumn" prefWidth="94.0" style="-fx-background-color: #696969;" text="Needed Space" />
+                <TableColumn fx:id="dateColumn" prefWidth="83.0" style="-fx-background-color: #00BFFF;" text="Date" />
+                <TableColumn fx:id="requestColumn" minWidth="7.0" prefWidth="114.0" style="-fx-background-color: #696969;" text="Send Request" />
+            </columns>
+        </TableView>
+        <ImageView fitHeight="54.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="25.0" layoutY="10.0" text="TruckTrack" textFill="DEEPSKYBLUE" textOverrun="WORD_ELLIPSIS">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <Button layoutX="15.0" layoutY="356.0" mnemonicParsing="false" onAction="#ReturnClientPosts" prefHeight="25.0" prefWidth="149.0" text="Show Posts" />
+      <TextField layoutX="18.0" layoutY="54.0" text="Start" />
+      <TextField layoutX="18.0" layoutY="157.0" text="Destination" />
+      <TextField layoutX="18.0" layoutY="257.0" text="Available Space" />
+    </children>
+</AnchorPane>
