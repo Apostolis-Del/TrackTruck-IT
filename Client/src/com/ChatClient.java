@@ -116,6 +116,7 @@ public class ChatClient {
         };
         t.start();
     }
+//this is the api that sends and receives messages from the server
 
     private void readMessageLoop() {
         try {

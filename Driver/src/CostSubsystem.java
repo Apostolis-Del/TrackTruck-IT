@@ -1,8 +1,3 @@
-package com;
-
-import sample.Client;
-
-import java.sql.Driver;
 import java.sql.SQLException;
 
 public class CostSubsystem {

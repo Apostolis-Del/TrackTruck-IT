@@ -5,6 +5,8 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -18,7 +20,14 @@
             <children>
                 <SplitPane dividerPositions="0.16541353383458646" layoutX="-4.0" orientation="VERTICAL" prefHeight="401.0" prefWidth="606.0">
                     <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;">
+                     <children>
+                        <ImageView fitHeight="74.0" fitWidth="141.0" layoutX="2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../TruckTrack%5BMaps%5D/out/production/TruckTrackfx/sample/eikonesProject/logofinal3.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="613.0" style="-fx-background-color: #696969 #696969;">
                             <children>
                                 <Text fill="WHITE" layoutX="96.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send delivery request to:" wrappingWidth="246.251953125">
@@ -31,7 +40,7 @@
                                 </Text>
                                 <Button layoutX="219.0" layoutY="165.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="44.0" prefWidth="141.0" text="Send Request" />
                         <TextField fx:id="sendusername" layoutX="360.0" layoutY="94.0" />
-                        <Label fx:id="username" layoutX="288.0" layoutY="43.0" text="Label"/>
+                        <Label fx:id="username" layoutX="288.0" layoutY="43.0" text="Label" />
                             </children>
                         </AnchorPane>
                     </items>

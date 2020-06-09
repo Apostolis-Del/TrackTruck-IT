@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -9,7 +10,7 @@
 
 <AnchorPane prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.LoginController">
     <children>
-        <AnchorPane prefHeight="102.0" prefWidth="601.0" style="-fx-background-color: #00bfff;">
+        <AnchorPane prefHeight="69.0" prefWidth="601.0" style="-fx-background-color: #00bfff;">
             <children>
                 <ImageView fitHeight="85.0" fitWidth="167.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -21,9 +22,14 @@
                   <Font size="22.0" />
                </font>
             </Text>
+            <ImageView fitHeight="96.0" fitWidth="186.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../TruckTrack%5BMaps%5D/out/production/TruckTrackfx/sample/eikonesProject/logofinal3.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutY="102.0" prefHeight="8.0" prefWidth="602.0" style="-fx-background-color: #ffffff;" />
+        <AnchorPane layoutY="90.0" prefHeight="10.0" prefWidth="602.0" style="-fx-background-color: #ffffff;" />
         <ToggleButton layoutX="283.0" layoutY="359.0" mnemonicParsing="false" onAction="#onloginbuttonclicked" text="Submit" />
         <TextArea fx:id="username" layoutX="158.0" layoutY="219.0" prefHeight="38.0" prefWidth="303.0" promptText="Enter your e-mail address" />
         <TextArea fx:id="password" layoutX="231.0" layoutY="272.0" prefHeight="38.0" prefWidth="158.0" promptText="Enter your password" />

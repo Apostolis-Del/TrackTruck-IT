@@ -3,16 +3,24 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.DealErrorClientController">
    <children>
       <SplitPane dividerPositions="0.16541353383458646" layoutX="-4.0" orientation="VERTICAL" prefHeight="401.0" prefWidth="606.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../TruckTrack%5BMaps%5D/out/production/TruckTrackfx/sample/eikonesProject/logofinal3.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="613.0" style="-fx-background-color: #696969 #696969;">
                <children>
                   <Text fill="WHITE" layoutX="136.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are sorry to inform you that the driver rejected your request." wrappingWidth="331.251953125">
@@ -31,7 +39,7 @@
                         <DropShadow />
                      </effect>
                   </Text>
-                  <Button fx:id="drivermenubutton" layoutX="232.0" layoutY="210.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="141.0" text="Driver Menu" />
+                  <Button fx:id="drivermenubutton" layoutX="232.0" layoutY="210.0" mnemonicParsing="false" onAction="#drivermenubuttonclicked" prefHeight="44.0" prefWidth="141.0" text="Driver Menu" />
                </children>
             </AnchorPane>
         </items>

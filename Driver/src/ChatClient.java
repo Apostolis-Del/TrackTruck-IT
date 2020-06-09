@@ -76,15 +76,6 @@ public class ChatClient {
         String cmd = "drivertoclient " + sendTo + " " + msgBody + "\n";
         serverOut.write(cmd.getBytes());
     }
-    public void ratings(String sendTo, String msgBody) throws IOException {
-        String cmd = "ratings " + sendTo + " " + msgBody + "\n";
-        serverOut.write(cmd.getBytes());
-    }
-    public void trackingoforder(String sendTo, String msgBody) throws IOException {
-        String cmd = "trackingoforder " + sendTo + " " + msgBody + "\n";
-        serverOut.write(cmd.getBytes());
-    }
-
 
     public boolean login(String login, String password) throws IOException {
         String cmd = "login " + login + " " + password + "\n";
@@ -134,7 +125,7 @@ public class ChatClient {
                     else if ("start".equalsIgnoreCase(cmd)) {
                         String[] tokensMsg = StringUtils.split(line, null, 3);
                         handleStart(tokensMsg);
-                        //secondWindow();
+                        secondWindow();
 
                     }
                     else if ("drivertoclient".equalsIgnoreCase(cmd)) {
@@ -143,16 +134,10 @@ public class ChatClient {
                         drivertoclientwindow();
 
                     }
-                    else if ("ratings".equalsIgnoreCase(cmd)) {
+                    else if ("firsterror".equalsIgnoreCase(cmd)) {
                         String[] tokensMsg = StringUtils.split(line, null, 3);
                         handleStart(tokensMsg);
-                        ratingswindow();
-
-                    }
-                    else if ("trackingoforder".equalsIgnoreCase(cmd)) {
-                        String[] tokensMsg = StringUtils.split(line, null, 3);
-                        handleStart(tokensMsg);
-                        trackingoforderwindow();
+                        firsterrorwindow();
 
                     }
                     else if ("seconderror".equalsIgnoreCase(cmd)) {
@@ -174,35 +159,6 @@ public class ChatClient {
         }
     }
 
-    private void trackingoforderwindow() {
-        try {
-
-            Platform.runLater(new Runnable() {
-                @Override
-                public void run() {
-                    FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("/TruckTrack[Maps]/sample.fxml"));
-                    Parent firstscreenparent = null;
-                    try {
-                        firstscreenparent = loader.load();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    Scene firstscreensecene = new Scene(firstscreenparent);
-                    Stage window2= new Stage();
-                    window2.setScene(firstscreensecene);
-                    window2.show();
-                }
-            });
-
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     private void seconderrorwindow() {
         try {
 
@@ -210,7 +166,7 @@ public class ChatClient {
                 @Override
                 public void run() {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("DeliveryErrorScreen.fxml"));
+                    loader.setLocation(getClass().getResource("DealErrorMsgDriverScreen.fxml"));
                     Parent firstscreenparent = null;
                     try {
                         firstscreenparent = loader.load();
@@ -232,14 +188,14 @@ public class ChatClient {
         }
     }
 
-    private void ratingswindow() {
+    private void firsterrorwindow() {
         try {
 
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource(""));
+                    loader.setLocation(getClass().getResource("DealErrorMsgClientScreen.fxml"));
                     Parent firstscreenparent = null;
                     try {
                         firstscreenparent = loader.load();
@@ -275,7 +231,7 @@ public class ChatClient {
                 @Override
                 public void run() {
                     FXMLLoader loader = new FXMLLoader();
-                    loader.setLocation(getClass().getResource("TruckTrack[Maps]/src/sample/sample.fxml"));
+                    loader.setLocation(getClass().getResource("PaymentScreen.fxml"));
                     Parent firstscreenparent = null;
                     try {
                         firstscreenparent = loader.load();
@@ -297,6 +253,40 @@ public class ChatClient {
         }
     }
 
+    public void secondWindow() throws IOException {
+        try {
+            /*
+           Parent root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        primaryStage.setTitle("TrackTruck");
+        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.show();
+
+            */
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("ShowReqDetailsScreen.fxml"));
+                    Parent firstscreenparent = null;
+                    try {
+                        firstscreenparent = loader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    Scene firstscreensecene = new Scene(firstscreenparent);
+                    Stage window2= new Stage();
+                    window2.setScene(firstscreensecene);
+                    window2.show();
+                }
+            });
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private void handleStart(String[] tokensMsg) {
         String start = tokensMsg[1];

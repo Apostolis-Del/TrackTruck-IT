@@ -239,8 +239,7 @@ public class ServerWorker extends Thread {
         }
     }
 
-    // format: "msg" "login" body...
-    // format: "msg" "#topic" body...
+
     private void handleMessage(String[] tokens) throws IOException {
         String sendTo = tokens[1];
         String body = tokens[2];

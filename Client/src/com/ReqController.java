@@ -99,7 +99,7 @@ public class ReqController {
     }
 
             public void changeScreenButtonAccept (ActionEvent event) throws IOException {
-       /* Parent parent2 = FXMLLoader.load(getClass().getResource("PaymentScreen.fxml"));
+        Parent parent2 = FXMLLoader.load(getClass().getResource("PaymentScreen.fxml"));
 
         Scene scene2 = new Scene(parent2);
 
@@ -113,7 +113,7 @@ public class ReqController {
 
 
 
-        */
+        /*
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -128,6 +128,8 @@ public class ReqController {
                         }
                     }
             });
+
+         */
        /* final ChatClient client;
         String senduser = sendusername.getText();
         String username1=username.toString();

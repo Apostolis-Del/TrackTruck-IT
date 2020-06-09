@@ -12,8 +12,10 @@ public class FirstCODController {
 
     }
 
-    public void deliveredbuttonpushed(ActionEvent actionEvent) {
+    public void deliveredbuttonpushed(ActionEvent actionEvent) throws IOException {
         //EDW PREPEI NA MPEI TO RATINGS/COMPLAINTS
+        SelectedClient.ratings("client","del");
+
     }
 
     public void initData(ChatClient client,String usernameclient){
@@ -22,7 +24,9 @@ public class FirstCODController {
 
     }
 
-    public void trackingoforderbuttonpushed(ActionEvent actionEvent) {
+    public void trackingoforderbuttonpushed(ActionEvent actionEvent) throws IOException {
         //EDW PREPEI NA MPEI TO TOO
+        SelectedClient.trackingoforder("client","del");
+
     }
 }

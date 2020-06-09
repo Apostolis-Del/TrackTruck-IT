@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReqController">
    <children>
       <SplitPane dividerPositions="0.1694915254237288" layoutX="-1.0" layoutY="-13.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="600.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #00BFFF;">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="113.0" layoutX="-9.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../TruckTrack%5BMaps%5D/out/production/TruckTrackfx/sample/eikonesProject/logofinal3.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #696969;">
                <children>
                   <Text fx:id="reqheader" fill="WHITE" layoutX="152.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have a new request from: ">
@@ -47,17 +60,17 @@
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="finishlabel" prefHeight="36.0" prefWidth="100.0" textFill="GREY">
+                        <Label fx:id="finishlabel" prefHeight="36.0" prefWidth="100.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="spacelabel" prefHeight="36.0" prefWidth="100.0" textFill="GREY">
+                        <Label fx:id="spacelabel" prefHeight="36.0" prefWidth="100.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="datelabel" prefHeight="29.0" prefWidth="102.0" textFill="GREY">
+                        <Label fx:id="datelabel" prefHeight="29.0" prefWidth="102.0" textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
@@ -66,6 +79,11 @@
                   </VBox>
                   <Button layoutX="236.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonAccept" prefHeight="29.0" prefWidth="56.0" text="Accept " />
                   <Button layoutX="357.0" layoutY="256.0" mnemonicParsing="false" onAction="#changeScreenButtonReject" prefHeight="29.0" prefWidth="56.0" text="Reject" />
+                  <Label fx:id="nameLabel" layoutX="446.0" layoutY="21.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </items>
