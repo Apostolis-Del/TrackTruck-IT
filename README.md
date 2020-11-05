@@ -1,4 +1,4 @@
-# Information Technology
+# TrackTruck-IT
 A Java/JavaFX/JavaSocket app for Truck Logistics named TrackTruck.
 
 TrackTruck is an app focusing on professionals in the logistics industry.This is accomplished through posts.
